@@ -1,0 +1,8 @@
+{
+    "locales": ["en-US", "zh-TW", "ko-KR", "th-TH", "id-ID", "zh-CN", "vi-VN", "ja-JP", "tl-PH"],
+    "defaultLocale": "en-US",
+    "pages": {
+      "*": ["common"],
+      "/": ["home"]
+    }
+}

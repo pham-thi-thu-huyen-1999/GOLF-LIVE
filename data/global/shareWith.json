@@ -1,0 +1,25 @@
+{
+    "shareWith": "Share with",
+    "socialMedia": [
+        {
+            "icon":"FacebookGray",
+            "urlIcon":""
+        },
+        {
+            "icon":"InstagramGray",
+            "urlIcon":""
+        },
+        {
+            "icon":"TwitterGray",
+            "urlIcon":""
+        },
+        {
+            "icon":"LinkedInGray",
+            "urlIcon":""
+        },
+        {
+            "icon":"YouTubeGray",
+            "urlIcon":""
+        }
+    ]
+}

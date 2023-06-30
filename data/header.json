@@ -1,0 +1,16 @@
+{
+  "header": [
+    {
+      "title": "Promotions",
+      "path": "promotions"
+    },
+    {
+      "title": "About us",
+      "path": "about"
+    },
+    {
+      "title": "FAQ",
+      "path": "faq"
+    }
+  ]
+}

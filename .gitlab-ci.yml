@@ -1,0 +1,147 @@
+stages:
+  - build
+  - staging
+  - production
+
+build-image:
+  stage: build
+  image: node:lts
+  before_script:
+    - yarn install
+  #  cache:
+  #    key: npm-install
+  #    paths:
+  #      - node_modules
+  #  before_script:
+  #    - docker version
+  #    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  artifacts:
+    name: "build-image"
+    when: 'always'
+    paths:
+      - ./node_modules
+    expire_in: 1 week
+  script:
+    - yarn
+  tags:
+    - docker
+  only:
+    #changes:
+    # Issues: only take changes from app folder. If app/api/* change will not build. TODO:: need find the work around if want to use this.
+    #- package.json
+    refs:
+      - staging
+
+
+deploy-staging:
+  stage: staging
+  #  rules:
+  #    - changes:
+  #        - Dockerfile
+  #        - app/*
+  #      when: always
+  #---CACHE things----
+  #  cache:
+  #    key: npm-install
+  #    paths:
+  #      - app/node_modules
+  #---END CACHE things----
+  # this dependencies value: name of the artifacts describe which artifacts will be used.
+  #  dependencies:
+  #    - build-image
+  before_script:
+      - . ~/.nvm/nvm.sh
+      - nvm use v16
+      - npm install yarn --global
+      - npm install pm2 --global
+  script:
+    - cp -r ./* /var/www/html/golf-live
+    - cd /var/www/html/golf-live
+    - yarn build && pm2 delete next && pm2 start npm --name "next" -- start
+  tags:
+    - shell
+  only:
+    #    changes:
+    #      - Dockerfile
+    # Issues: only take changes from app folder. If app/api/* change will not build. TODO:: need find the work around if want to use this.
+    #      - app/*
+    refs:
+      - staging
+
+
+deploy-production:
+  stage: production
+  #  rules:
+  #    - changes:
+  #        - Dockerfile
+  #        - app/*
+  #      when: always
+  #---CACHE things----
+  #  cache:
+  #    key: npm-install
+  #    paths:
+  #      - app/node_modules
+  #---END CACHE things----
+  # this dependencies value: name of the artifacts describe which artifacts will be used.
+  #  dependencies:
+  #    - build-image
+  before_script:
+    - . ~/.nvm/nvm.sh
+    - nvm use v16
+    - npm install pm2 --global
+    - npm install yarn --global
+  script:
+    - cp -r ./* /var/www/html/
+    - cd /var/www/html/ && yarn install && yarn build
+    - pm2 delete next
+    - pm2 start npm --name "next" -- start
+  tags:
+    - production
+  only:
+    #    changes:
+    #      - Dockerfile
+    # Issues: only take changes from app folder. If app/api/* change will not build. TODO:: need find the work around if want to use this.
+    #      - app/*
+    refs:
+      - production
+
+deploy-prod-igxv2:
+  stage: production
+  #  rules:
+  #    - changes:
+  #        - Dockerfile
+  #        - app/*
+  #      when: always
+  #---CACHE things----
+  #  cache:
+  #    key: npm-install
+  #    paths:
+  #      - app/node_modules
+  #---END CACHE things----
+  # this dependencies value: name of the artifacts describe which artifacts will be used.
+  #  dependencies:
+  #    - build-image
+  before_script:
+    - . ~/.nvm/nvm.sh
+    - nvm use v16
+    - npm install pm2 --global
+    - npm install yarn --global
+  script:
+    - cp -r ./* /var/www/html/
+    - cp -r ./* /var/www/mmm.igxv2.com/
+    - cd /var/www/html/ && yarn install && yarn build
+    - pm2 delete next
+    - pm2 start ecosystem.config.js
+    - cd /var/www/mmm.igxv2.com/ && yarn install && yarn build
+    - pm2 delete nextmmm
+    - pm2 start ecosystem.config.js
+  tags:
+    - prod-igxv2
+  only:
+    #    changes:
+    #      - Dockerfile
+    # Issues: only take changes from app folder. If app/api/* change will not build. TODO:: need find the work around if want to use this.
+    #      - app/*
+    refs:
+      - production-igxv2-new
+

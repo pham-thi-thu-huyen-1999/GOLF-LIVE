@@ -1,0 +1,79 @@
+{
+    "homePage": "golflive.com",
+    "urlHomePage": "/",
+    "listItem": [
+        {
+            "text": "Terms",
+            "url": ""
+        },
+        {
+            "text": "Advertise",
+            "url": ""
+        },
+        {
+            "text": "Resources",
+            "url": ""
+        },
+        {
+            "text": "Contact Us",
+            "url": ""
+        },
+        {
+            "text": "FAQ",
+            "url": ""
+        }
+    ],
+    "follow": "follow us",
+    "socialMedia18": [
+        {
+            "icon":"EmailFooter",
+            "urlIcon":"mailto:csr@igx360.com"
+        },
+        {
+            "icon":"Whatsapp",
+            "urlIcon":"https://wa.me/639398373218?text="
+        },
+        {
+            "icon":"Skype",
+            "urlIcon":"skype:live:.cid.c6699277c8307?chat"
+        },
+        {
+            "icon":"Telegram",
+            "urlIcon":"https://t.me/+639398373218"
+        },
+        {
+            "icon":"Viber",
+            "urlIcon":"viber://chat?number=639398373218"
+        }
+    ],
+    "socialMedia": [
+        {
+            "icon":"EmailFooter",
+            "urlIcon":"mailto:csr@igx360.com"
+        },
+        {
+            "icon":"Whatsapp",
+            "urlIcon":"https://wa.me/639398373209?text="
+        },
+        {
+            "icon":"Skype",
+            "urlIcon":"skype:live:.cid.8451795585c29674?chat"
+        },
+        {
+            "icon":"Telegram",
+            "urlIcon":"https://t.me/+639398373209"
+        },
+        {
+            "icon":"Viber",
+            "urlIcon":"viber://chat?number=639398373209"
+        },
+        {
+            "icon":"Facebook",
+            "urlIcon":"https://www.facebook.com/IGX360?mibextid=ZbWKwL"
+        },
+        {
+            "icon":"Instagram",
+            "urlIcon":"https://instagram.com/igx_360?igshid=YmMyMTA2M2Y="
+        }
+    ]
+}

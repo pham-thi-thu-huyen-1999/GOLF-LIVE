@@ -1,0 +1,15 @@
+# Ignore folders
+node_modules/
+
+.idea
+.vscode
+.DS_Store
+._*
+yarn.lock
+node_modules
+.next
+.out
+yarn-error.lock
+package-log.json
+.env*
+.env

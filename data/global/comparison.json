@@ -1,0 +1,102 @@
+{
+    "title": "Player comparison",
+    "subTitle": "Compare up to 4 players players performance using our performance ranking graph",
+    "playersComparison": [
+        {
+            "name": "Scottie Scheffler 1",
+            "level": "Rank 18",
+            "avt": "images/players/golfer_1.png",
+            "logo": "/images/players/logo-title.png",
+            "eventsJoined": [
+                {
+                    "name": "2014",
+                    "label": "Career start"
+                },
+                {
+                    "name": "109",
+                    "label": "events player"
+                },
+                {
+                    "name": "16",
+                    "label": "event wins"
+                },
+                {
+                    "name": "18",
+                    "label": "Best ranking"
+                }
+            ]
+        },
+        {
+            "name": "Scottie Scheffler 2",
+            "level": "Rank 18",
+            "avt": "images/players/golfer_3.png",
+            "logo": "/images/players/logo-title.png",
+            "eventsJoined": [
+                {
+                    "name": "2014",
+                    "label": "Career start"
+                },
+                {
+                    "name": "109",
+                    "label": "events player"
+                },
+                {
+                    "name": "16",
+                    "label": "event wins"
+                },
+                {
+                    "name": "18",
+                    "label": "Best ranking"
+                }
+            ]
+        },
+        {
+            "name": "Scottie Scheffler 3",
+            "level": "Rank 18",
+            "avt": "images/players/golfer_3.png",
+            "logo": "/images/players/logo-title.png",
+            "eventsJoined": [
+                {
+                    "name": "2014",
+                    "label": "Career start"
+                },
+                {
+                    "name": "109",
+                    "label": "events player"
+                },
+                {
+                    "name": "16",
+                    "label": "event wins"
+                },
+                {
+                    "name": "18",
+                    "label": "Best ranking"
+                }
+            ]
+        },
+        {
+            "name": "Scottie Scheffler 4",
+            "level": "Rank 18",
+            "avt": "images/players/golfer_1.png",
+            "logo": "/images/players/logo-title.png",
+            "eventsJoined": [
+                {
+                    "name": "2014",
+                    "label": "Career start"
+                },
+                {
+                    "name": "109",
+                    "label": "events player"
+                },
+                {
+                    "name": "16",
+                    "label": "event wins"
+                },
+                {
+                    "name": "18",
+                    "label": "Best ranking"
+                }
+            ]
+        }
+    ]
+}
